@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exoplanets!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <svg width="760" height="760"></svg>
+      <div class="notes">
+
+        <div class="plot-notes">
+          <h4>Notes:</h4>
+          <p>Hover over circles to see available information.</p>
+          <p>Circle size indicates radius if known.</p>
+          <p>Planets with no distance information have an orange border.</p>
+          <p>Shading indicates mass if known. The darker the more massive.</p>
+        </div>
+        <div class="bar-notes">
+          <h4>Notes:</h4>
+          <p>Hover over column to see number of exoplanets found that year.</p>
+        </div>
+        <div class="stacked-notes">
+          <h4>Notes:</h4>
+          <p>y-axis is not linear in order to display less frequent methods.</p>
+          <hr>
+          <h4>Definitions:</h4>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Transit-timing_variation" target="_blank">Transit Timing Variations</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Transit_photometry" target="_blank">Transit</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Radial_velocity" target="_blank">Radial Velocity</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Variable_star_timing" target="_blank">Pulsation Timing Variations</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Pulsar_timing" target="_blank">Pulsar Timing</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Reflection.2FEmission_modulations" target="_blank">Orbital Brightness Modulation</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Gravitational_microlensing" target="_blank">Microlensing</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Direct_imaging" target="_blank">Imaging</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Eclipsing_binary_minima_timing" target="_blank">Eclipse Timing Variations</a></p>
+          <p class="definition"><a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets#Astrometry" target="_blank">Astrometry</a></p>
+          <hr>
+        </div>
+        <p>Data as of 24 August 2017.</p>
+        <p>Source: <a href="https://exoplanetarchive.ipac.caltech.edu/index.html"
+          target="_blank">NASA Exoplanet Archive</a></p>
+    </div>
+    <div class="text-center selector">
+      <p>Select chart type to view Exoplanet data:</p>
+      <select name id="chart">
+        <option value="bar" class="bar" selected>Bar Chart, Number Found</option>
+        <option value="scatter" class="scatter">Scatter Plot, Distance</option>
+        <option value="stacked" class="stacked">Stacked Bar, Detection Method</option>
+      </select>
+    </div>
+  </div>
+  <div class="tooltip"></div>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="scatterPlot.js"></script>
+  <script src="stackedBar.js"></script>
+  <script src="barchart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
